@@ -9,7 +9,7 @@ test(`Create article with empty title`, async ({
 }) => {
   const user = userRequests[0];
   const articlesApi = new ArticlesApi(user);
-  let article = { ...createArticleWithoutTags, title: '' }
+  let article = { ...createArticleWithoutTags, title: '' };
 
   const response = await articlesApi.createArticle(article);
 

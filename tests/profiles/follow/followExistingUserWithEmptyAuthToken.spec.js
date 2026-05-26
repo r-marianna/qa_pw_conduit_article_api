@@ -13,7 +13,7 @@ test(`Follow profile for existing user by other user with empty token`, async ({
     extraHTTPHeaders: {
       authorization: 'Token ',
       'content-type': 'application/json'
-    }
+    },
   });
 
   const profilesApi = new ProfilesApi(emptyToken);

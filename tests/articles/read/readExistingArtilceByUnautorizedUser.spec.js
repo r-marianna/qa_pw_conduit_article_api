@@ -25,7 +25,7 @@ test(`Read existing article by unauthorized user`,
       extraHTTPHeaders: {
         authorization: 'Token ',
         'content-type': 'application/json'
-      }
+      },
     });
     const articlesApi = new ArticlesApi(emptyToken);
 

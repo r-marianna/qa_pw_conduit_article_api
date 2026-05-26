@@ -38,7 +38,7 @@ export class ArticlesApi extends BaseAPI {
   async getArticle(slug) {
     return await this.step(`Get article`, async () => {
       return await this.request.get(ROUTES.articles(slug).open, {
-        headers: this._headers,
+        headers: this._headers
       });
     });
   }
@@ -101,8 +101,10 @@ export class ArticlesApi extends BaseAPI {
         const body = await this.parseBody(response);
         const tags = body.article.tagList;
 
-        if (tags.length !== tagList.length) return false;
-        return tags.every((val, i) => expect(val).toBe(tagList[i]));
+        expect(tags.length).toBe(tagList.length);
+        for (let i = 0; i < tags.length; i++) {
+          expect(tags[i]).toBe(tagList[i]);
+        }
       },
     );
   }
