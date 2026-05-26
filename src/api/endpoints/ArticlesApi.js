@@ -59,7 +59,7 @@ export class ArticlesApi extends BaseAPI {
 
   async unfollowArticle(slug) {
     return await this.step(`Unfollow article`, async () => {
-      return await this.request.delete(ROUTES.profiles(slug).follow, {});
+      return await this.request.delete(ROUTES.articles(slug).follow, {});
     });
   }
 

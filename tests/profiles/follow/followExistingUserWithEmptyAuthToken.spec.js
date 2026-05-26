@@ -6,7 +6,6 @@ test.use({ usersNumber: 1 });
 
 test(`Follow profile for existing user by other user with empty token`, async ({
   registeredUsers,
-  userRequests,
 }) => {
   const user1 = registeredUsers[0];
 

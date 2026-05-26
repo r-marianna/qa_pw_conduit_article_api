@@ -30,5 +30,5 @@ export const test = base.extend<{
     const articleWithTwoTags = generateNewArticleData(logger, 2);
 
     await use(articleWithTwoTags);
-  }
+  },
 });
